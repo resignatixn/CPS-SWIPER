@@ -64,7 +64,6 @@ h1 {
   border: 1px solid #eaeaea;
   border-radius: 6px;
   background-color: white;
-  /* min-height: 72px; */
 }
 
 .brand__link {
@@ -75,14 +74,10 @@ h1 {
   padding: 0 16px;
 }
 
-.brand__button {
+.brand__go-icon {
   background-image: url(../public/go.svg);
   width: 40px;
   height: 40px;
-}
-
-.swiper-slide:nth-last-child(-n + 3) {
-  display: none;
 }
 
 .brands__button {
@@ -102,13 +97,13 @@ h1 {
   cursor: pointer;
 }
 
-#toggle-button::before {
+.brands__button::before {
   content: url('../public/expand.svg');
   height: 24px;
   width: 24px;
 }
 
-#toggle-button.rotate::before {
+.brands__button.rotate::before {
   content: url('../public/expand.svg');
   transform: rotate(180deg);
   height: 24px;
@@ -120,14 +115,15 @@ h1 {
   top: -100%;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 1119px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-  }
-  .swiper-slide:nth-last-child(-n + 5) {
-    display: none;
   }
 }
 @media (max-width: 768px) {
